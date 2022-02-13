@@ -25,6 +25,22 @@ function inShuffle(deck, numShuffle) {
   }
 }
 
+function firstToBottom(deck) {
+  var val = 0;
+  inShuffle(deck, 1);
+  console.log(deck);
+  /*
+  for (let i = 1; i < 100; i++) {
+    inShuffle(deck, i);
+    console.log(deck);
+    if (deck[52] === 1) {
+      val = i;
+      return val;
+    }
+  }
+  */
+}
+
 createDeck(deck);
 
 function clearArray() {
@@ -36,7 +52,7 @@ function display() {
   const newDeck = inShuffle(deck, numShuffle);
   document.getElementById("array").innerHTML = newDeck;
 }
-
+console.log(firstToBottom(deck));
 // using the console
 /*
 createDeck(deck);
